@@ -1,0 +1,30 @@
+{
+    "name": "axllent/silverstripe-raygun-tags",
+    "description": "Automatically add Silverstripe tags to Raygun error logs",
+    "type": "silverstripe-vendormodule",
+    "homepage": "https://github.com/axllent/silverstripe-raygun-tags",
+    "keywords": [
+        "silverstripe",
+        "raygun",
+        "logging"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ralph Slooten",
+            "homepage": "http://www.axllent.org/"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/axllent/silverstripe-raygun-tags/issues"
+    },
+    "require": {
+        "silverstripe/framework": "^4.0",
+        "silverstripe/raygun": "^3.5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Axllent\\RaygunTags\\": "src/"
+        }
+    }
+}
