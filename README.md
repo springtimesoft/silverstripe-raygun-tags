@@ -1,4 +1,4 @@
-# Add useful tags to SilverStripe Raygun logs
+# Add useful tags to Silverstripe Raygun logs
 
 This is a purpose-built extension that adds several useful tags to error messages that are published to Raygun via the [silverstripe/silverstripe-raygun](https://github.com/silverstripe/silverstripe-raygun) extension.
 
@@ -14,7 +14,7 @@ The following tags are added:
 
 ## Requirements
 
-- SilverStripe 4+
+- Silverstripe 4+
 - A Raygun application and API key (see [configuration](#configuration))
 
 
@@ -28,6 +28,7 @@ Simply install the module: `conmposer require axllent/silverstripe-raygun-tags`
 Add the `SS_RAYGUN_APP_KEY="xxxxxxxxx"` environment variable to your `.env` file.
 
 Please refer to the original silverstripe/silverstripe-raygun [README](https://github.com/silverstripe/silverstripe-raygun) for further information on customising the Raygun extension.
+
 
 ## Installation
 
