@@ -1,7 +1,9 @@
 <?php
+
 namespace Axllent\RaygunTags;
 
 use Composer\InstalledVersions;
+use Monolog\LogRecord;
 use Monolog\Processor\ProcessorInterface;
 use SilverStripe\Control\Director;
 
@@ -13,13 +15,14 @@ class Processor implements ProcessorInterface
     /**
      * Tags.
      *
-     * @var    array
+     * @var array
+     *
      * @config
      */
     public static $tags = [];
 
     /**
-     * Contructor
+     * Constructor
      *
      * @return void
      */
@@ -43,11 +46,11 @@ class Processor implements ProcessorInterface
     /**
      * Invoke method
      *
-     * @param array $record Record array
+     * @param LogRecord $record Log rRecord
      *
      * @return array
      */
-    public function __invoke(array $record)
+    public function __invoke(LogRecord $record)
     {
         $record['extra']['tags'] = self::$tags;
 
