@@ -5,22 +5,22 @@ This is a purpose-built extension that adds several useful tags to error message
 The following tags are added:
 
 - `env:live` (or `env:dev` / `env:test`)
-- `php:8.0.x`
+- `php:8.2.x`
 - `host:example.com`
-- `framework:4.10.x.x`
+- `framework:5.0.x`
 - `ajax:false` (true if this is an AJAX request)
 - `cli:false` (true if being run via the CLI)
 
 
 ## Requirements
 
-- Silverstripe 4+
+- Silverstripe ^4.0 || ^5.0
 - A Raygun application and API key (see [configuration](#configuration))
 
 
 ## Usage
 
-Simply install the module: `conmposer require axllent/silverstripe-raygun-tags`
+Simply install the module: `composer require axllent/silverstripe-raygun-tags`
 
 
 ## Configuration
