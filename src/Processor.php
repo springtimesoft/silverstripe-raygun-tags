@@ -1,5 +1,6 @@
 <?php
-namespace Axllent\RaygunTags;
+
+namespace Springtimesoft\RaygunTags;
 
 use Composer\InstalledVersions;
 use Monolog\Processor\ProcessorInterface;
@@ -13,13 +14,14 @@ class Processor implements ProcessorInterface
     /**
      * Tags.
      *
-     * @var    array
+     * @var array
+     *
      * @config
      */
     public static $tags = [];
 
     /**
-     * Contructor
+     * Constructor
      *
      * @return void
      */

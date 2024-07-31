@@ -1,5 +1,5 @@
 ---
-Name: rayguntagsprocessor
+Name: raygun-tags-processor
 Before:
   - raygun
 Only:
@@ -8,4 +8,4 @@ Only:
 SilverStripe\Core\Injector\Injector:
   Psr\Log\LoggerInterface:
     calls:
-      - [ pushProcessor, [ '%$Axllent\RaygunTags\Processor' ]]
+      - [ pushProcessor, [ '%$Springtimesoft\RaygunTags\Processor' ]]

@@ -20,7 +20,7 @@ The following tags are added:
 
 ## Usage
 
-Simply install the module: `conmposer require axllent/silverstripe-raygun-tags`
+Simply install the module: `conmposer require springtimesoft/silverstripe-raygun-tags`
 
 
 ## Configuration
@@ -33,5 +33,5 @@ Please refer to the original silverstripe/silverstripe-raygun [README](https://g
 ## Installation
 
 ```shell
-composer require axllent/silverstripe-raygun-tags
+composer require springtimesoft/silverstripe-raygun-tags
 ```
