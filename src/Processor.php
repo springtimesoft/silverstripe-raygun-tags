@@ -1,6 +1,6 @@
 <?php
 
-namespace Axllent\RaygunTags;
+namespace Springtimesoft\RaygunTags;
 
 use Composer\InstalledVersions;
 use Monolog\LogRecord;

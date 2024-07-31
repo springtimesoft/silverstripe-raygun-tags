@@ -11,16 +11,18 @@ The following tags are added:
 - `ajax:false` (true if this is an AJAX request)
 - `cli:false` (true if being run via the CLI)
 
+The logging level is set to WARNING and above (debug & info is ignored, see [configuration](#configuration)).
+
 
 ## Requirements
 
-- Silverstripe ^4.0 || ^5.0
+- Silverstripe ^5.0
 - A Raygun application and API key (see [configuration](#configuration))
 
 
 ## Usage
 
-Simply install the module: `composer require axllent/silverstripe-raygun-tags`
+Simply install the module: `composer require springtimesoft/silverstripe-raygun-tags`
 
 
 ## Configuration
@@ -29,9 +31,26 @@ Add the `SS_RAYGUN_APP_KEY="xxxxxxxxx"` environment variable to your `.env` file
 
 Please refer to the original silverstripe/silverstripe-raygun [README](https://github.com/silverstripe/silverstripe-raygun) for further information on customising the Raygun extension.
 
+To change the logging level of your application you can overrule the module's defaults by adding a custom yaml file like:
+
+```yaml
+---
+Name: custom-raygun
+After:
+  - '#raygun-log-level'
+Only:
+  envorconstant: 'SS_RAYGUN_APP_KEY'
+---
+
+# Prevent Raygun from logging debug/info messages, which aren't considered errors
+SilverStripe\Core\Injector\Injector:
+  SilverStripe\Raygun\RaygunHandler:
+    constructor:
+      level: 100 # Monolog\Level::Debug
+```
 
 ## Installation
 
 ```shell
-composer require axllent/silverstripe-raygun-tags
+composer require springtimesoft/silverstripe-raygun-tags
 ```
