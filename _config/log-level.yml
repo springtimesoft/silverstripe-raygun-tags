@@ -1,0 +1,13 @@
+---
+Name: raygun-log-level
+After:
+  - '#raygun'
+Only:
+  envorconstant: 'SS_RAYGUN_APP_KEY'
+---
+
+# Prevent Raygun from logging debug/info messages, which aren't considered errors
+SilverStripe\Core\Injector\Injector:
+  SilverStripe\Raygun\RaygunHandler:
+    constructor:
+      level: 250 # Monolog\Level::Notice

@@ -1,11 +1,12 @@
 ---
-Name: rayguntagsprocessor
+Name: raygun-tags-processor
 Before:
   - raygun
 Only:
   envorconstant: 'SS_RAYGUN_APP_KEY'
 ---
+
 SilverStripe\Core\Injector\Injector:
   Psr\Log\LoggerInterface:
     calls:
-      - [ pushProcessor, [ '%$Axllent\RaygunTags\Processor' ]]
+      - [ pushProcessor, [ '%$Springtimesoft\RaygunTags\Processor' ]]
